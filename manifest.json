@@ -1,0 +1,30 @@
+{
+    "version": "1.0.0",
+    "author": "4gana1_human",
+    "name": "X_blocker",
+    "description": "Extension Desc",
+    "icons": {
+      "128": "icon128.png"
+    },
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "options_ui": {
+      "page": "options.html"
+    },
+    "permissions": [
+      "storage",
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": [
+          "content-script.js"
+        ],
+      }
+    ],
+  }
