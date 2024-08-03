@@ -1,30 +1,28 @@
 {
-    "version": "1.0.0",
-    "author": "4gana1_human",
-    "name": "X_blocker",
-    "description": "Extension Desc",
-    "icons": {
-      "128": "icon128.png"
-    },
-    "manifest_version": 3,
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "options_ui": {
-      "page": "options.html"
-    },
-    "permissions": [
-      "storage",
-      "activeTab"
-    ],
-    "content_scripts": [
-      {
-        "matches": [
-          "<all_urls>"
-        ],
-        "js": [
-          "content-script.js"
-        ],
-      }
-    ],
+  "version": "1.0.1",
+  "author": "4gana1_human",
+  "name": "X_block",
+  "description": "X(旧Twitter)のインプレゾンビをブロックします",
+  "icons": {
+    "128": "img/icon128.png"
+  },
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*"
+      ],
+      "js": [
+        "js/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
   }
+}
