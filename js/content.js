@@ -41,7 +41,6 @@ function enableXBlock() {
     // observer を保持
     window.xBlockObserver = observer;
 }
-
 function disableXBlock() {
     console.log('X_block disabled');
     if (window.xBlockObserver) {
@@ -51,7 +50,7 @@ function disableXBlock() {
     // 無効化された要素を再表示
     const hiddenDivs = document.querySelectorAll('div[data-hidden-by-xblock="true"]');
     hiddenDivs.forEach(div => {
-        div.style.display = '';
+        div.style.display = ''; // `block` にするのではなく、元の状態に戻す
         div.removeAttribute('data-hidden-by-xblock');
     });
 }
